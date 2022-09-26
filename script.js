@@ -4,6 +4,7 @@
 // set up 2d array for checkers piece placement
 
 /*----- constants -----*/
+
 /*----- app's state (variables) -----*/
 
 const gameBoard = [
@@ -14,7 +15,7 @@ const gameBoard = [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
 ]
 
 let playerTurn = 1
@@ -22,9 +23,17 @@ let playerTurn = 1
 /*----- cached element references -----*/
 
 let tds = document.querySelectorAll('td')
+let table = document.querySelector('table')
 
 /*----- event listeners -----*/
 
+table.addEventListener('mouseover', function() {
+    event.target.classList.add('highlight')
+})
+
+table.addEventListener('mouseout', function() {
+    event.target.classList.remove('highlight')
+})
 
 /*----- functions -----*/
 
