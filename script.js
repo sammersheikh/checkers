@@ -17,23 +17,30 @@ const gameBoard = [
     [0, 0, 0, 0, 0, 0, 0, 0]
 ]
 
+let playerTurn = 1
+
 /*----- cached element references -----*/
 
-/*----- event listeners -----*/
-$('td').on('click', function() {
-    alert('piece clicked!')
-})
+let tds = document.querySelectorAll('td')
 
-let counter = 1
-$('.toggleH1').on("click", function() {
-    if (counter === 1) {
-        $('h1').hide()
-        counter *= -1
-    } else if (counter === -1) {
-        $('h1').show()
-        counter *= -1
-    }
-    console.log(counter)
-})
+/*----- event listeners -----*/
+
 
 /*----- functions -----*/
+
+tds.forEach(function(td, idx) {
+
+    if (idx < 8 || (idx > 15 && idx < 24) || (idx > 31 && idx < 40) || (idx > 47 && idx < 56)) {
+        if (idx % 2 === 0) {
+            td.classList.add('even')
+        } else if (idx % 2 !== 0) {
+            td.classList.add('odd')
+        }
+    } else {
+        if (idx % 2 === 0) {
+            td.classList.add('odd')
+        } else if (idx % 2 !== 0) {
+            td.classList.add('even')
+        }
+    }
+})
