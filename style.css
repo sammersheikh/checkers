@@ -16,25 +16,26 @@ table {
 }
 td {
     border: 1px solid black;
-    /* position: relative; */
-    /* text-align: center; */
+    position: relative;
+    height: 100px;
+    width: 100px;
     
 }
 .redGamePiece {
-    margin: 0 auto;
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 80px;
+    width: 80px;
     background: red;
     border-radius: 50%;
-    position: absolute;
+    
 }
 
 .blueGamePiece {
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 80px;
+    width: 80px;
     background-color: blue;
     border-radius: 50%;
-    position: absolute;
 }
 
 
