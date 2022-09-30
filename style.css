@@ -5,6 +5,7 @@ body {
     text-align: center;
 }
 
+
 table {
     margin-left: auto;
     margin-right: auto;
@@ -13,15 +14,21 @@ table {
     width: 950px;
     background: white;
 }
+.blueGamePiece {
+    border-radius: 50%;
+    border: blue;
+    
+}
 
 td {
     border: 1px solid black;
 }
 
-.even {
+.black {
     background-color: black;
 }
 
 .highlight {
     background-color: tan;
 }
+
