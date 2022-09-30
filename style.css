@@ -9,23 +9,40 @@ body {
 table {
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid gold;
+    border: 1px solid black;
     height: 950px;
     width: 950px;
     background: white;
 }
-.blueGamePiece {
-    border-radius: 50%;
-    border: blue;
-    
-}
-
 td {
     border: 1px solid black;
+    /* position: relative; */
+    /* text-align: center; */
+    
 }
+.redGamePiece {
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.blueGamePiece {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+}
+
 
 .black {
     background-color: black;
+}
+.white {
+    background-color: white;
 }
 
 .highlight {
