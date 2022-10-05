@@ -2,6 +2,7 @@
 // set up a click event when user clicks on checkers piece
 // highlight available tiles for piece to move when a piece is clicked
 // set up 2d array for checkers piece placement
+// when i click, console.log the 2d array coordinates
 
 //even = black
 //odd = white
@@ -22,8 +23,23 @@ const gameBoard = [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
 ]
+// for (i = 0; i < gameBoard.length; i++) {
+//     for (j = 0; j < gameBoard[i].length; j++) {
+//         console.log(i[j])
+//     }
+// }
+function traverseGameBoard() {
+gameBoard.forEach(function(arr, rowIdx) {
+    arr.forEach(function(piece, colIdx) {
+        // console.log(arr[piece])
+
+    })
+}) 
+}
+
 
 let playerTurn = 1
+let rowIdx
 
 /*----- cached element references -----*/
 
@@ -41,9 +57,20 @@ document.querySelector('tbody').addEventListener('mouseout', function() {
 })
 tds.forEach(function(td, idx) {
     td.addEventListener('click', function() {
-        console.log(idx)
+        // console.log(idx)
+        traverseGameBoard()
+        
     })
 })
+
+document.querySelectorAll('tr').forEach(function(row) {
+    row.addEventListener('click', function() {
+        rowIdx = row.className[3]
+        rowIdx = parseInt(rowIdx)
+        console.log(rowIdx)
+    })
+})
+
 
 /*----- functions -----*/
 
@@ -68,7 +95,7 @@ blackPieces = document.getElementsByClassName('black')
 
 tds.forEach(function(td, idx) {
     if (idx >= 0 && idx < 23 && td.className === 'black') {
-        console.log(idx, td)
+        // console.log(idx, td)
         td.innerHTML = '<div class="redGamePiece"></div>'
     } else if (idx > 39 && idx < 63 && td.className === 'white') {
         td.innerHTML = '<div class="blueGamePiece"></div>'
