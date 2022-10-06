@@ -39,11 +39,12 @@ gameBoard.forEach(function(arr, rowIdx) {
 
 
 let playerTurn = 1
-let rowIdx
+let colIdx, rowIdx
 
 /*----- cached element references -----*/
 
 let tds = document.querySelectorAll('td')
+let rows = document.querySelectorAll('tr')
 let table = document.getElementsByName('table')
 
 /*----- event listeners -----*/
@@ -55,22 +56,24 @@ document.querySelector('tbody').addEventListener('mouseover', function() {
 document.querySelector('tbody').addEventListener('mouseout', function() {
     event.target.classList.remove('highlight')
 })
+
+rows.forEach(function(row) {
+    row.addEventListener('click', function() {
+        rowIdx = row.className[3]
+        rowIdx = parseInt(rowIdx)
+        // console.log(rowIdx)
+    })
+})
+
 tds.forEach(function(td, idx) {
     td.addEventListener('click', function() {
-        // console.log(idx)
+        colIdx = td.className[3]
+        colIdx = parseInt(colIdx)
+        console.log(rowIdx + ', ' + colIdx)
         traverseGameBoard()
         
     })
 })
-
-document.querySelectorAll('tr').forEach(function(row) {
-    row.addEventListener('click', function() {
-        rowIdx = row.className[3]
-        rowIdx = parseInt(rowIdx)
-        console.log(rowIdx)
-    })
-})
-
 
 /*----- functions -----*/
 
