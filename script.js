@@ -23,6 +23,9 @@ const gameBoard = [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
 ]
+
+let playerTurn = 1
+let colIdx, rowIdx
 // for (i = 0; i < gameBoard.length; i++) {
 //     for (j = 0; j < gameBoard[i].length; j++) {
 //         console.log(i[j])
@@ -37,9 +40,6 @@ gameBoard.forEach(function(arr, rowIdx) {
 }) 
 }
 
-
-let playerTurn = 1
-let colIdx, rowIdx
 
 /*----- cached element references -----*/
 
@@ -61,17 +61,16 @@ rows.forEach(function(row) {
     row.addEventListener('click', function() {
         rowIdx = row.className[3]
         rowIdx = parseInt(rowIdx)
-        // console.log(rowIdx)
+        console.log(`row: ${rowIdx}, col: ${colIdx}`)
     })
 })
 
-tds.forEach(function(td, idx) {
+tds.forEach(function(td) {
     td.addEventListener('click', function() {
         colIdx = td.className[3]
         colIdx = parseInt(colIdx)
-        console.log(rowIdx + ', ' + colIdx)
+        // console.log(`colIdx: ${colIdx}`)
         traverseGameBoard()
-        
     })
 })
 
