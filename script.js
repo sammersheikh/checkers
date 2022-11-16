@@ -1,8 +1,10 @@
 // psuedocode:
-// set up a click event when user clicks on checkers piece
+// set up a click event when user clicks on checkers piece - done
+// set up 2d array for checkers piece placement - done 
+// when i click, console.log the 2d array coordinates - done
+
+// show game pieces and change the 2d array with active game piece
 // highlight available tiles for piece to move when a piece is clicked
-// set up 2d array for checkers piece placement
-// when i click, console.log the 2d array coordinates
 
 //even = black
 //odd = white
@@ -32,12 +34,11 @@ let colIdx, rowIdx
 //     }
 // }
 function traverseGameBoard() {
-gameBoard.forEach(function(arr, rowIdx) {
-    arr.forEach(function(piece, colIdx) {
-        // console.log(arr[piece])
-
-    })
-}) 
+    for (let i = 0; i < gameBoard.length - 1; i++) {
+        for (let j = 0; j < gameBoard[i].length; j++) {
+            console.log(gameBoard[i][j])
+        }
+    }
 }
 
 
