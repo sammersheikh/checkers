@@ -36,10 +36,10 @@ let colIdx, rowIdx
 function traverseGameBoard() {
     for (let i = 0; i < gameBoard.length - 1; i++) {
         for (let j = 0; j < gameBoard[i].length; j++) {
-            console.log(gameBoard[i][j])
+            // console.log(gameBoard[i][j])
         }
     }
-}
+ }
 
 
 /*----- cached element references -----*/
@@ -109,3 +109,6 @@ tds.forEach(function(td, idx) {
         //     console.log(i)
         // }
     
+// first commit of the year
+// use chat gpt to help solve this problem
+// 
