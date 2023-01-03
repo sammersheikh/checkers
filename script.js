@@ -111,4 +111,5 @@ tds.forEach(function(td, idx) {
     
 // first commit of the year
 // use chat gpt to help solve this problem
-// 
+// second commit of the year
+//dont give up
