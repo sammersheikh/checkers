@@ -113,3 +113,4 @@ tds.forEach(function(td, idx) {
 // use chat gpt to help solve this problem
 // second commit of the year
 //dont give up
+// never give up
