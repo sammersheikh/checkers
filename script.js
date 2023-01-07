@@ -3,7 +3,8 @@
 // set up 2d array for checkers piece placement - done 
 // when i click, console.log the 2d array coordinates - done
 
-// show game pieces and change the 2d array with active game piece
+// show game pieces
+//change the 2d array with active game piece
 // highlight available tiles for piece to move when a piece is clicked
 
 //even = black
