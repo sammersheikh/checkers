@@ -2,7 +2,7 @@
 // set up a click event when user clicks on checkers piece - done
 // set up 2d array for checkers piece placement - done 
 // when i click, console.log the 2d array coordinates - done
-
+// add game piece position to array and create if statements outputting red or blue pieces
 // show game pieces
 //change the 2d array with active game piece
 // highlight available tiles for piece to move when a piece is clicked
@@ -12,20 +12,37 @@
 
 /*----- constants -----*/
 
+/*
+For array:
+    0 = blank space
+    1 = red piece
+    2 = blue piece
+*/
+
 // let gamePiece = document.createElement('div')
 
 /*----- app's state (variables) -----*/
 
 const gameBoard = [
+    [1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 2, 0, 2, 0, 2, 0, 2],
+    [2, 0, 2, 0, 2, 0, 2, 0],
+    [0, 2, 0, 2, 0, 2, 0, 2],
 ]
+// const gameBoard = [
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0],
+// ]
 
 let playerTurn = 1
 let colIdx, rowIdx
@@ -35,13 +52,17 @@ let colIdx, rowIdx
 //     }
 // }
 function traverseGameBoard() {
-    for (let i = 0; i < gameBoard.length - 1; i++) {
+    for (let i = 0; i < gameBoard.length; i++) {
         for (let j = 0; j < gameBoard[i].length; j++) {
-            // console.log(gameBoard[i][j])
+            if (gameBoard[i][j] === 1) {
+                console.log("red piece")
+            } else if (gameBoard[i][j] === 2) {
+                console.log("blue piece")
+            }
         }
     }
  }
-
+ traverseGameBoard()
 
 /*----- cached element references -----*/
 
