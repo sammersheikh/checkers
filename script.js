@@ -23,7 +23,7 @@ For array:
 
 /*----- app's state (variables) -----*/
 
-const gameBoard = [
+let gameBoard = [
     [1, 0, 1, 0, 1, 0, 1, 0],
     [0, 1, 0, 1, 0, 1, 0, 1],
     [1, 0, 1, 0, 1, 0, 1, 0],
@@ -55,6 +55,7 @@ function traverseGameBoard() {
     for (let i = 0; i < gameBoard.length; i++) {
         for (let j = 0; j < gameBoard[i].length; j++) {
             if (gameBoard[i][j] === 1) {
+                
                 console.log("red piece")
             } else if (gameBoard[i][j] === 2) {
                 console.log("blue piece")
@@ -84,7 +85,7 @@ rows.forEach(function(row) {
     row.addEventListener('click', function() {
         rowIdx = row.className[3]
         rowIdx = parseInt(rowIdx)
-        console.log(`row: ${rowIdx}, col: ${colIdx}`)
+        // console.log(`row: ${rowIdx}, col: ${colIdx}`)
     })
 })
 
