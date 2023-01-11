@@ -55,7 +55,7 @@ function traverseGameBoard() {
     for (let i = 0; i < gameBoard.length; i++) {
         for (let j = 0; j < gameBoard[i].length; j++) {
             if (gameBoard[i][j] === 1) {
-
+                // add red game oiece div to table
                 console.log("red piece")
             } else if (gameBoard[i][j] === 2) {
                 console.log("blue piece")
