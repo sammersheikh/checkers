@@ -142,3 +142,4 @@ tds.forEach(function(td, idx) {
 // first day of new job - 1/9/23
 // create a portfolio
 //consistency
+// put in the work
